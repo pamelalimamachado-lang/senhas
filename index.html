@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show de Horrores das Senhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Expondo o Absurdo: O Show de Horrores das Senhas ☠️</h1>
+        <p>Uma viagem bem-humorada pelo pior da segurança digital. Você usa alguma dessas?</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>🎰 Gerador de Senhas Absurdas</h2>
+            <p>Clique no botão para descobrir o que os "gênios" da segurança andam usando por aí.</p>
+            <button id="btn-gerador">Gerar Pior Senha</button>
+            <div id="display-gerador" class="resultado-box hidden">
+                <p class="senha-gerada" id="texto-senha"></p>
+                <p class="comentario-senha" id="texto-comentario"></p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🔍 Medidor de Absurdo</h2>
+            <p>Digite sua senha atual (prometemos não roubar... ou sim?) para avaliar o nível do perigo.</p>
+            <div class="input-group">
+                <input type="password" id="input-senha" placeholder="Digite sua senha aqui...">
+                <button id="btn-toggle">Mostrar</button>
+            </div>
+            <div id="medidor-status" class="status-barra">
+                <div id="barra-progresso"></div>
+            </div>
+            <p id="texto-status" class="texto-feedback">Esperando você digitar...</p>
+        </section>
+
+        <section class="card">
+            <h2>🏆 O Hall da Fama do Erro (Top 5)</h2>
+            <ul class="lista-senhas">
+                <li><span class="posicao">1°</span> <strong>123456</strong> <span class="badge">O Clássico Imbatível</span></li>
+                <li><span class="posicao">2°</span> <strong>password</strong> <span class="badge">Criatividade Zero</span></li>
+                <li><span class="posicao">3°</span> <strong>123456789</strong> <span class="badge">Para os "Avançados"</span></li>
+                <li><span class="posicao">4°</span> <strong>guest</strong> <span class="badge">Seja Bem-Vindo, Hacker</span></li>
+                <li><span class="posicao">5°</span> <strong>qwerty</strong> <span class="badge">Preguiça de Teclado</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h3>💡 Como não passar vergonha na internet:</h3>
+        <p>Use pelo menos 12 caracteres • Misture Letras, NÚMEROS e sýmbo£os • Evite sequências e datas de aniversário • Use um gerenciador de senhas confiável.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
