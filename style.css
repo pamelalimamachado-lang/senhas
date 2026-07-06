@@ -1,0 +1,209 @@
+/* Configurações Gerais e Cores (Tema Dark Cyberpunk Sarcástico) */
+:root {
+    --bg-color: #0b0f19;
+    --card-bg: #151d30;
+    --text-color: #f3f4f6;
+    --accent-purple: #8b5cf6;
+    --accent-cyan: #06b6d4;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+header h1 {
+    color: var(--accent-cyan);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+/* Layout Responsivo */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding-bottom: 40px;
+}
+
+/* Cards do Projeto */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2 {
+    color: var(--accent-purple);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(135deg, var(--accent-purple), #6d28d9);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/* Área de resultados do Gerador */
+.resultado-box {
+    background-color: #0f172a;
+    border-left: 4px solid var(--accent-cyan);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.senha-gerada {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+    color: var(--accent-cyan) !important;
+    font-weight: bold;
+    margin-bottom: 5px !important;
+}
+
+/* Medidor de Absurdo (Inputs e Barra) */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="password"], input[type="text"] {
+    flex: 1;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 2px solid var(--accent-cyan);
+}
+
+#btn-toggle {
+    background: #334155;
+    font-size: 0.85rem;
+}
+
+.status-barra {
+    background-color: #334155;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#barra-progresso {
+    width: 0%;
+    height: 100%;
+    transition: width 0.4s, background-color 0.4s;
+}
+
+.texto-feedback {
+    font-weight: bold;
+    font-size: 0.9rem !important;
+}
+
+/* Listas (Top 5) */
+.lista-senhas {
+    list-style: none;
+}
+
+.lista-senhas li {
+    background-color: #0f172a;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.posicao {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.badge {
+    margin-left: auto;
+    font-size: 0.75rem;
+    background-color: #1e293b;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #9ca3af;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    padding: 25px;
+    border-top: 1px solid #1e293b;
+}
+
+footer h3 {
+    color: var(--success);
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
